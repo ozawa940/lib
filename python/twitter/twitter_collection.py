@@ -75,9 +75,7 @@ class TwitterCollection:
             while len(result) < count:
                 try:
                     logging.debug("{0} tweets".format(len(result)))
-
-                    logging.debug(
-                        "next_results:{0}".format(tmp_result["search_metadata"]["next_results"]))
+                    
                     next_result = tmp_result["search_metadata"]["next_results"]
                 except KeyError:
                     logging.info("Nothing next_result.")
