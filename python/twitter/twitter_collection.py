@@ -121,13 +121,7 @@ class TwitterCollection:
                 next_id = tmp_result[len(tmp_result) - 1]["id"]
 
                 #次の検索キーワード
-                kwargs = {
-                    "screen_name" : screen_name,
-                    "count" : 200,
-                    "exclude_replies" : "false",
-                    "include_rts" : "false",
-                    "max_id" : next_id,
-                }
+                kwargs["max_id"] = next_id
 
                 tmp_result = self.twitter.statuses.user_timeline(**kwargs)
 
