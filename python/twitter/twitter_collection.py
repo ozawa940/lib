@@ -23,7 +23,7 @@ from twitter import *
     2. 指定したスクリーンネームのツイートを最大3200件まで取得 ：
         ret_collect_screen_tweets(screen_name="@test")
 
-    3. TwitterSteamを使ってツイートを取得(日本全国) ：
+    3. TwitterStreamを使ってツイートを取得(日本全国) ：
         ret_collect_stream_tweet(limit=300)
 
     各メソッドのcallに各JSONデータに対する処理を入れたコールバック関数を入れると
