@@ -20,8 +20,16 @@ Example)
 
 
 """
-import logging, traceback
+import logging
+import traceback
+import time
+from datetime import datetime
 from twitter import *
+
+# Using kill_timer
+class TimeoutException(Exception):
+    pass
+
 
 # ADT Class
 class TwCollectionBase(object):
@@ -67,7 +75,7 @@ class TwCollectionBase(object):
             elif version == 2:
                 auth = OAuth2(bearer_token=self.BEARER_TOKEN)
                 self.twitter = Twitter(auth=auth)
-        iregular        return
+                return
             elif version == 3:
                 self.twitter = TwitterStream(auth=auth)
                 return
@@ -77,17 +85,22 @@ class TwCollectionBase(object):
             raise
 
     # TODO
-    # This method return bool.
+    # This method is sleeping until rate limit of next reset.
     # If your account use up rate limit, calling sleep method.
-    def _managing_rateLimit(self):
-        pass
-
+    # Target is api name, and version is Oauth version.
+    # Refer Oauth version into _managing_oauth.
+    def _managing_rateLimit(self, target, version):
+        self._managing_oauth(version=version)
+        reset_time = self.twitter.application.rate_limit_status()["resources"][target[0]][target[1]]["reset"]
+        diff = datetime.fromtimestamp(time.mktime(time.gmtime(reset_time))) - datetime.utcnow()
+        logging.info("sleep time: {0}, time{1}".format(diff.total_seconds(), diff))
+        time.sleep(diff.total_seconds())
 
 # Using Twitter REST API
 class TwitterREST(TwCollectionBase):
     # This method return tweet of targeting screen_name until 3200 tweets.
-    def __init__(self):
-        super(TwitterREST, self).__init__()
+    def __init__(self, keylist):
+        super(TwitterREST, self).__init__(keylist)
         self._managing_oauth(version=2)
 
     # input type
@@ -100,35 +113,83 @@ class TwitterREST(TwCollectionBase):
     def get_account_tweet(self, kwargs):
         callback = lambda json: [(data["user"]["screen_name"], data["text"], data["id_str"]) for data in json]
         # Countermeasure for rate limit
+        def process_return_data(flag):
+            if flag == "first":
+                data = self._get_account_tweet_process(callback=callback, kwargs=kwargs)
+                self.resume_data = None
+                return data
+            elif flag == "resume":
+                data = self._get_account_tweet_process(callback=callback, resume=self.resume_data)
+                self.resume_data = None
+                return data
         try:
-            return self.get_account_tweet_process(callback=callback, kwargs=kwargs)
+            return process_return_data("first")
+        except TimeoutException as e:
+            if self.resume_data is None:
+                return process_return_data("first")
+            else:
+                return process_return_data("resume")
         except TwitterHTTPError as e:
             # error code 88 is rate limit exceeded
-            if e.response_data["errors"][0]["code"] == 88:
-                self._managing_rateLimit()
-                return self.get_account_tweet_process(callback=callback, resume=self.resume_data)
+            if "errors" in e.response_data:
+                if e.response_data["errors"][0]["code"] == 88:
+                    self._managing_rateLimit()
+                    if self.resume_data is None:
+                        return process_return_data("first")
+                    else:
+                        return process_return_data("resume")
+            elif "error" in e.response_data:
+                return (kwargs["screen_name"] ,e.response_data)
             raise
         except Exception:
             logging.error("iregular error {0}".format(traceback.format_exc()))
             raise
+
+    # This is decorator for killing process over time
+    def kill_timer(self, limit):
+        def __decorator(function):
+            def hundler(signum, frame):
+                logging.info("kill process")
+                raise TimeoutException
+            def __wrapper(*args, **kwargs):
+                import signal
+                signal.signal(signal.SIGALRM, hundler) 
+                signal.alarm(limit)
+                result = function(*args, **kwargs)
+                signal.alarm(0)
+                return result
+            return __wrapper
+        return __decorator
     # This method is process of get_account_tweet
-    def _get_account_tweet_process(self, callback, kwargs=None, resume=None)
+    def _get_account_tweet_process(self, callback, kwargs=None, resume=None):
+        # Using decorator
+        @self.kill_timer(15)
+        def user_timeline(**kwargs):
+            return self.twitter.statuses.user_timeline(**kwargs)
+
         if resume is not None:
+            logging.debug("Using resume")
             kwargs = resume[0]
             result = resume[1]
-            tmp_result = self.twitter.statuses.user_timeline(**kwargs)
+            tmp_result = user_timeline(**kwargs)
             result += callback(tmp_result)
         else:
-            tmp_result = self.twitter.statuses.user_timeline(**kwargs)
+            tmp_result = user_timeline(**kwargs)
+            logging.info("initilaze {0},{1} tweets".format(kwargs["screen_name"], len(tmp_result)))
+            logging.debug("kwargs:{0}".format(kwargs))
             result = callback(tmp_result)
+            if len(tmp_result) <= 1:
+                logging.info("no tweets of timeline")
+                return result
         while True:
-            logging.debug("{0},{1}".format(kwargs["screen_name"], len(result)))
+            logging.info("loop {0},{1} tweets".format(kwargs["screen_name"], len(result)))
             next_id = tmp_result[len(tmp_result) -1]["id"]
             kwargs["max_id"] = next_id
             # self.resume_data is for resuming
             self.resume_data = (kwargs, result)
-            tmp_result = self.twitter.statuses.user_timeline(**kwargs)
-            if len(tmp_result) == 1:
+            tmp_result = user_timeline(**kwargs)
+            logging.debug("result length: {0}".format(len(tmp_result)))
+            if len(tmp_result) <= 1:
                 logging.info("no tweets of timeline")
                 break
             result += callback(tmp_result)
@@ -140,8 +201,8 @@ class TwitterStream(TwCollectionBase):
     # This method is collecting account list from TwitterStream API,
     # and range is whole Japan.
     # Duplicate of account is deleted.
-    def __init__(self):
-        super(TwitterREST, self).__init__()
+    def __init__(self, keylist):
+        super(TwitterREST, self).__init__(keylist)
         self._managing_oauth(version=3)
     #TODO
     def account_list(self, count):
@@ -152,7 +213,6 @@ class TwitterStream(TwCollectionBase):
         pass
         #for data in self.twitter.statuses.filter(**kwargs):
             
-
 
 
 
