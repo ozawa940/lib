@@ -54,11 +54,27 @@ class TwCollectionBase(object):
     # This method return Oauth
     # Version parameter means "1 = user-auth, 2 = app-auth, 3 = stream-auth"
     def _managing_oauth(self, version):
-        pass
-
-
-
-
+        try:
+            auth = OAuth(
+                    self.ACCESS_TOKEN,
+                    self.ACCESS_TOKEN_SECRET,
+                    self.CONSUMER_KEY,
+                    self.CONSUMER_SECRET
+                    )
+            if version == 1:
+                self.twitter = Twitter(auth=auth)
+                return
+            elif version == 2:
+                auth = OAuth2(bearer_token=self.BEARER_TOKEN)
+                self.twitter = Twitter(auth=auth)
+                return
+            elif version == 3:
+                self.twitter = TwitterStream(auth=auth)
+                return
+            raise Exception("arguments error")
+        except Exception:
+            logging.error(traceback.format_exc())
+            raise
 
     # TODO
     # This method return bool.
@@ -67,15 +83,11 @@ class TwCollectionBase(object):
         pass
 
 
-
-
-
 # Using Twitter REST API
 class TwitterREST(TwCollectionBase):
     # This method return tweet of targeting screen_name until 3200 tweets.
     def get_account_tweet(self, screen_name):
         pass
-
 
 # Using Twitter Stream API
 class TwitterStream(TwCollectionBase):
