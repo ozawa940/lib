@@ -1,6 +1,8 @@
 # coding: utf-8
 
 """
+ First I'm poor at English.
+
  This class need importing sixohsix/twitter and using python version 3.
  Please install it with pip.
  Example)
@@ -58,7 +60,6 @@ class TwCollectionBase(object):
         except:
             logging.error(traceback.format_exc())
             raise
-    # TODO
     # This method return Oauth
     # Version parameter means "1 = user-auth, 2 = app-auth, 3 = stream-auth"
     def _managing_oauth(self, version):
@@ -113,44 +114,44 @@ class TwitterREST(TwCollectionBase):
         callback = lambda json: [(data["user"]["screen_name"], data["text"], data["id_str"]) for data in json]
         # Countermeasure for rate limit
         def process_return_data(flag):
-            if flag == "first":
-                data = self._get_account_tweet_process(callback=callback, kwargs=kwargs)
-                self.resume_data = None
-                return data
-            elif flag == "resume":
-                data = self._get_account_tweet_process(callback=callback, resume=self.resume_data)
-                self.resume_data = None
-                return data
-        try:
-            return process_return_data("first")
-        except TimeoutException as e:
-            # For using kill_timer
-            import signal
-            signal.alarm(0)
-            if not self.resume_data:
-                return process_return_data("first")
-            else:
-                return process_return_data("resume")
-        except TwitterHTTPError as e:
-            logging.debug("raise TwitterHTTPError:{0}".format(e.response_data))
-            # For using kill_timer
-            import signal
-            signal.alarm(0)
-            target = ("statuses", "/statuses/user_timeline")
-            # error code 88 is rate limit exceeded
-            if "errors" in e.response_data:
-                if e.response_data["errors"][0]["code"] == 88:
-                    self._managing_rateLimit(target=target, version=2)
-                    if self.resume_data is None:
-                        return process_return_data("first")
-                    else:
-                        return process_return_data("resume")
-            elif "error" in e.response_data:
-                return (kwargs["screen_name"] ,e.response_data)
-            raise
-        except Exception:
-            logging.error("iregular error {0}".format(traceback.format_exc()))
-            raise
+            try:
+                if flag == "first":
+                    data = self._get_account_tweet_process(callback=callback, kwargs=kwargs)
+                    self.resume_data = None
+                    return data
+                elif flag == "resume":
+                    data = self._get_account_tweet_process(callback=callback, resume=self.resume_data)
+                    self.resume_data = None
+                    return data
+            except TimeoutException as e:
+                # For using kill_timer
+                import signal
+                signal.alarm(0)
+                if not self.resume_data:
+                    return process_return_data("first")
+                else:
+                    return process_return_data("resume")
+            except TwitterHTTPError as e:
+                logging.debug("raise TwitterHTTPError:{0}".format(e.response_data))
+                # For using kill_timer
+                import signal
+                signal.alarm(0)
+                target = ("statuses", "/statuses/user_timeline")
+                # error code 88 is rate limit exceeded
+                if "errors" in e.response_data:
+                    if e.response_data["errors"][0]["code"] == 88:
+                        self._managing_rateLimit(target=target, version=2)
+                        if self.resume_data is None:
+                            return process_return_data("first")
+                        else:
+                            return process_return_data("resume")
+                elif "error" in e.response_data:
+                    return (kwargs["screen_name"] ,e.response_data)
+                raise
+            except Exception:
+                logging.error("iregular error {0}".format(traceback.format_exc()))
+                raise
+        return process_return_data("first")
 
     # This is decorator for killing process over time
     def kill_timer(self, limit):
