@@ -1,0 +1,501 @@
+2016-06-24 14:15:18,868 INFO initialize @_ranntei_,190 tweets
+2016-06-24 14:15:18,869 DEBUG kwargs:{'exclude_replies': 'false', 'count': 200, 'include_rts': 'false', 'screen_name': '@_ranntei_'}
+2016-06-24 14:15:18,869 INFO loop @_ranntei_,190 tweets
+2016-06-24 14:15:20,019 DEBUG result length: 197
+2016-06-24 14:15:20,019 INFO loop @_ranntei_,387 tweets
+2016-06-24 14:15:21,119 DEBUG result length: 199
+2016-06-24 14:15:21,119 INFO loop @_ranntei_,586 tweets
+2016-06-24 14:15:22,169 DEBUG result length: 200
+2016-06-24 14:15:22,169 INFO loop @_ranntei_,786 tweets
+2016-06-24 14:15:23,283 DEBUG result length: 197
+2016-06-24 14:15:23,283 INFO loop @_ranntei_,983 tweets
+2016-06-24 14:15:24,483 DEBUG result length: 195
+2016-06-24 14:15:24,484 INFO loop @_ranntei_,1178 tweets
+2016-06-24 14:15:25,588 DEBUG result length: 193
+2016-06-24 14:15:25,589 INFO loop @_ranntei_,1371 tweets
+2016-06-24 14:15:26,689 DEBUG result length: 193
+2016-06-24 14:15:26,689 INFO loop @_ranntei_,1564 tweets
+2016-06-24 14:15:27,779 DEBUG result length: 191
+2016-06-24 14:15:27,780 INFO loop @_ranntei_,1755 tweets
+2016-06-24 14:15:28,866 DEBUG result length: 195
+2016-06-24 14:15:28,866 INFO loop @_ranntei_,1950 tweets
+2016-06-24 14:15:30,029 DEBUG result length: 189
+2016-06-24 14:15:30,029 INFO loop @_ranntei_,2139 tweets
+2016-06-24 14:15:31,112 DEBUG result length: 176
+2016-06-24 14:15:31,112 INFO loop @_ranntei_,2315 tweets
+2016-06-24 14:15:46,112 INFO kill process
+2016-06-24 14:15:46,113 DEBUG Using resume
+2016-06-24 14:15:47,184 INFO loop @_ranntei_,2494 tweets
+2016-06-24 14:15:48,315 DEBUG result length: 177
+2016-06-24 14:15:48,315 INFO loop @_ranntei_,2671 tweets
+2016-06-24 14:15:49,427 DEBUG result length: 190
+2016-06-24 14:15:49,427 INFO loop @_ranntei_,2861 tweets
+2016-06-24 14:15:50,509 DEBUG result length: 188
+2016-06-24 14:15:50,509 INFO loop @_ranntei_,3049 tweets
+2016-06-24 14:15:51,188 DEBUG result length: 23
+2016-06-24 14:15:51,188 INFO loop @_ranntei_,3072 tweets
+2016-06-24 14:15:51,635 DEBUG result length: 1
+2016-06-24 14:15:51,636 INFO no tweets of timeline
+2016-06-24 14:15:52,744 INFO initialize @kankuroits,200 tweets
+2016-06-24 14:15:52,744 DEBUG kwargs:{'exclude_replies': 'false', 'count': 200, 'include_rts': 'false', 'screen_name': '@kankuroits'}
+2016-06-24 14:15:52,744 INFO loop @kankuroits,200 tweets
+2016-06-24 14:15:53,871 DEBUG result length: 200
+2016-06-24 14:15:53,872 INFO loop @kankuroits,400 tweets
+2016-06-24 14:15:55,043 DEBUG result length: 199
+2016-06-24 14:15:55,043 INFO loop @kankuroits,599 tweets
+2016-06-24 14:15:56,243 DEBUG result length: 185
+2016-06-24 14:15:56,244 INFO loop @kankuroits,784 tweets
+2016-06-24 14:15:57,347 DEBUG result length: 182
+2016-06-24 14:15:57,347 INFO loop @kankuroits,966 tweets
+2016-06-24 14:15:58,393 DEBUG result length: 152
+2016-06-24 14:15:58,393 INFO loop @kankuroits,1118 tweets
+2016-06-24 14:15:59,433 DEBUG result length: 144
+2016-06-24 14:15:59,433 INFO loop @kankuroits,1262 tweets
+2016-06-24 14:16:00,522 DEBUG result length: 200
+2016-06-24 14:16:00,522 INFO loop @kankuroits,1462 tweets
+2016-06-24 14:16:01,652 DEBUG result length: 200
+2016-06-24 14:16:01,652 INFO loop @kankuroits,1662 tweets
+2016-06-24 14:16:02,077 DEBUG raise TwitterHTTPError
+2016-06-24 14:16:02,528 INFO sleep time: 369.471667, time0:06:09.471667
+2016-06-24 14:22:13,033 DEBUG Using resume
+2016-06-24 14:22:14,187 INFO loop @kankuroits,1862 tweets
+2016-06-24 14:22:15,419 DEBUG result length: 200
+2016-06-24 14:22:15,419 INFO loop @kankuroits,2062 tweets
+2016-06-24 14:22:16,713 DEBUG result length: 200
+2016-06-24 14:22:16,713 INFO loop @kankuroits,2262 tweets
+2016-06-24 14:22:17,808 DEBUG result length: 199
+2016-06-24 14:22:17,809 INFO loop @kankuroits,2461 tweets
+2016-06-24 14:22:19,003 DEBUG result length: 199
+2016-06-24 14:22:19,004 INFO loop @kankuroits,2660 tweets
+2016-06-24 14:22:20,403 DEBUG result length: 200
+2016-06-24 14:22:20,403 INFO loop @kankuroits,2860 tweets
+2016-06-24 14:22:21,813 DEBUG result length: 200
+2016-06-24 14:22:21,814 INFO loop @kankuroits,3060 tweets
+2016-06-24 14:22:22,498 DEBUG result length: 22
+2016-06-24 14:22:22,498 INFO loop @kankuroits,3082 tweets
+2016-06-24 14:22:23,031 DEBUG result length: 1
+2016-06-24 14:22:23,032 INFO no tweets of timeline
+2016-06-24 14:22:23,860 INFO initialize @hanakobo7,58 tweets
+2016-06-24 14:22:23,860 DEBUG kwargs:{'exclude_replies': 'false', 'count': 200, 'include_rts': 'false', 'screen_name': '@hanakobo7'}
+2016-06-24 14:22:23,860 INFO loop @hanakobo7,58 tweets
+2016-06-24 14:22:24,320 DEBUG result length: 1
+2016-06-24 14:22:24,320 INFO no tweets of timeline
+2016-06-24 14:22:25,321 INFO initialize @ocean_tokyo0925,148 tweets
+2016-06-24 14:22:25,321 DEBUG kwargs:{'exclude_replies': 'false', 'count': 200, 'include_rts': 'false', 'screen_name': '@ocean_tokyo0925'}
+2016-06-24 14:22:25,321 INFO loop @ocean_tokyo0925,148 tweets
+2016-06-24 14:22:26,434 DEBUG result length: 185
+2016-06-24 14:22:26,434 INFO loop @ocean_tokyo0925,333 tweets
+2016-06-24 14:22:27,498 DEBUG result length: 186
+2016-06-24 14:22:27,499 INFO loop @ocean_tokyo0925,519 tweets
+2016-06-24 14:22:42,499 INFO kill process
+2016-06-24 14:22:42,499 DEBUG Using resume
+2016-06-24 14:22:44,043 INFO loop @ocean_tokyo0925,670 tweets
+2016-06-24 14:22:45,125 DEBUG result length: 172
+2016-06-24 14:22:45,125 INFO loop @ocean_tokyo0925,842 tweets
+2016-06-24 14:22:46,097 DEBUG result length: 148
+2016-06-24 14:22:46,098 INFO loop @ocean_tokyo0925,990 tweets
+2016-06-24 14:22:47,275 DEBUG result length: 182
+2016-06-24 14:22:47,276 INFO loop @ocean_tokyo0925,1172 tweets
+2016-06-24 14:22:48,354 DEBUG result length: 189
+2016-06-24 14:22:48,354 INFO loop @ocean_tokyo0925,1361 tweets
+2016-06-24 14:22:49,436 DEBUG result length: 188
+2016-06-24 14:22:49,437 INFO loop @ocean_tokyo0925,1549 tweets
+2016-06-24 14:22:50,536 DEBUG result length: 182
+2016-06-24 14:22:50,537 INFO loop @ocean_tokyo0925,1731 tweets
+2016-06-24 14:22:51,494 DEBUG result length: 150
+2016-06-24 14:22:51,494 INFO loop @ocean_tokyo0925,1881 tweets
+2016-06-24 14:22:52,456 DEBUG result length: 160
+2016-06-24 14:22:52,456 INFO loop @ocean_tokyo0925,2041 tweets
+2016-06-24 14:22:53,541 DEBUG result length: 177
+2016-06-24 14:22:53,541 INFO loop @ocean_tokyo0925,2218 tweets
+2016-06-24 14:22:54,557 DEBUG result length: 148
+2016-06-24 14:22:54,558 INFO loop @ocean_tokyo0925,2366 tweets
+2016-06-24 14:22:55,540 DEBUG result length: 142
+2016-06-24 14:22:55,540 INFO loop @ocean_tokyo0925,2508 tweets
+2016-06-24 14:22:56,608 DEBUG result length: 190
+2016-06-24 14:22:56,609 INFO loop @ocean_tokyo0925,2698 tweets
+2016-06-24 14:22:57,296 DEBUG result length: 36
+2016-06-24 14:22:57,297 INFO loop @ocean_tokyo0925,2734 tweets
+2016-06-24 14:22:57,768 DEBUG result length: 1
+2016-06-24 14:22:57,769 INFO no tweets of timeline
+2016-06-24 14:22:58,462 INFO initialize @tsk05165751,20 tweets
+2016-06-24 14:22:58,462 DEBUG kwargs:{'exclude_replies': 'false', 'count': 200, 'include_rts': 'false', 'screen_name': '@tsk05165751'}
+2016-06-24 14:22:58,463 INFO loop @tsk05165751,20 tweets
+2016-06-24 14:22:58,924 DEBUG result length: 1
+2016-06-24 14:22:58,924 INFO no tweets of timeline
+2016-06-24 14:23:00,211 INFO initialize @minomika_s_yuka,199 tweets
+2016-06-24 14:23:00,211 DEBUG kwargs:{'exclude_replies': 'false', 'count': 200, 'include_rts': 'false', 'screen_name': '@minomika_s_yuka'}
+2016-06-24 14:23:00,211 INFO loop @minomika_s_yuka,199 tweets
+2016-06-24 14:23:01,283 DEBUG result length: 160
+2016-06-24 14:23:01,283 INFO loop @minomika_s_yuka,359 tweets
+2016-06-24 14:23:01,873 DEBUG result length: 10
+2016-06-24 14:23:01,873 INFO loop @minomika_s_yuka,369 tweets
+2016-06-24 14:23:02,478 DEBUG result length: 12
+2016-06-24 14:23:02,478 INFO loop @minomika_s_yuka,381 tweets
+2016-06-24 14:23:03,364 DEBUG result length: 69
+2016-06-24 14:23:03,365 INFO loop @minomika_s_yuka,450 tweets
+2016-06-24 14:23:18,366 INFO kill process
+2016-06-24 14:23:18,366 DEBUG Using resume
+2016-06-24 14:23:19,371 INFO loop @minomika_s_yuka,591 tweets
+2016-06-24 14:23:20,641 DEBUG result length: 154
+2016-06-24 14:23:20,641 INFO loop @minomika_s_yuka,745 tweets
+2016-06-24 14:23:21,913 DEBUG result length: 167
+2016-06-24 14:23:21,914 INFO loop @minomika_s_yuka,912 tweets
+2016-06-24 14:23:22,984 DEBUG result length: 165
+2016-06-24 14:23:22,985 INFO loop @minomika_s_yuka,1077 tweets
+2016-06-24 14:23:24,386 DEBUG result length: 101
+2016-06-24 14:23:24,387 INFO loop @minomika_s_yuka,1178 tweets
+2016-06-24 14:23:25,429 DEBUG result length: 152
+2016-06-24 14:23:25,430 INFO loop @minomika_s_yuka,1330 tweets
+2016-06-24 14:23:26,562 DEBUG result length: 182
+2016-06-24 14:23:26,563 INFO loop @minomika_s_yuka,1512 tweets
+2016-06-24 14:23:27,626 DEBUG result length: 155
+2016-06-24 14:23:27,626 INFO loop @minomika_s_yuka,1667 tweets
+2016-06-24 14:23:28,669 DEBUG result length: 172
+2016-06-24 14:23:28,670 INFO loop @minomika_s_yuka,1839 tweets
+2016-06-24 14:23:29,809 DEBUG result length: 155
+2016-06-24 14:23:29,810 INFO loop @minomika_s_yuka,1994 tweets
+2016-06-24 14:23:30,625 DEBUG result length: 70
+2016-06-24 14:23:30,626 INFO loop @minomika_s_yuka,2064 tweets
+2016-06-24 14:23:31,081 DEBUG result length: 1
+2016-06-24 14:23:31,081 INFO no tweets of timeline
+2016-06-24 14:23:32,171 INFO initialize @to_sato3,159 tweets
+2016-06-24 14:23:32,172 DEBUG kwargs:{'exclude_replies': 'false', 'count': 200, 'include_rts': 'false', 'screen_name': '@to_sato3'}
+2016-06-24 14:23:32,172 INFO loop @to_sato3,159 tweets
+2016-06-24 14:23:33,262 DEBUG result length: 180
+2016-06-24 14:23:33,262 INFO loop @to_sato3,339 tweets
+2016-06-24 14:23:34,388 DEBUG result length: 192
+2016-06-24 14:23:34,389 INFO loop @to_sato3,531 tweets
+2016-06-24 14:23:35,476 DEBUG result length: 198
+2016-06-24 14:23:35,476 INFO loop @to_sato3,729 tweets
+2016-06-24 14:23:36,561 DEBUG result length: 194
+2016-06-24 14:23:36,561 INFO loop @to_sato3,923 tweets
+2016-06-24 14:23:37,753 DEBUG result length: 194
+2016-06-24 14:23:37,753 INFO loop @to_sato3,1117 tweets
+2016-06-24 14:23:38,828 DEBUG result length: 186
+2016-06-24 14:23:38,829 INFO loop @to_sato3,1303 tweets
+2016-06-24 14:23:39,955 DEBUG result length: 190
+2016-06-24 14:23:39,956 INFO loop @to_sato3,1493 tweets
+2016-06-24 14:23:40,775 DEBUG result length: 57
+2016-06-24 14:23:40,776 INFO loop @to_sato3,1550 tweets
+2016-06-24 14:23:41,354 DEBUG result length: 1
+2016-06-24 14:23:41,354 INFO no tweets of timeline
+2016-06-24 14:23:42,420 INFO initialize @6JaY1WHc0SewbW1,183 tweets
+2016-06-24 14:23:42,420 DEBUG kwargs:{'exclude_replies': 'false', 'count': 200, 'include_rts': 'false', 'screen_name': '@6JaY1WHc0SewbW1'}
+2016-06-24 14:23:42,420 INFO loop @6JaY1WHc0SewbW1,183 tweets
+2016-06-24 14:23:43,570 DEBUG result length: 172
+2016-06-24 14:23:43,571 INFO loop @6JaY1WHc0SewbW1,355 tweets
+2016-06-24 14:23:44,482 DEBUG result length: 78
+2016-06-24 14:23:44,483 INFO loop @6JaY1WHc0SewbW1,433 tweets
+2016-06-24 14:23:44,960 DEBUG result length: 1
+2016-06-24 14:23:44,960 INFO no tweets of timeline
+2016-06-24 14:23:45,412 DEBUG raise TwitterHTTPError
+2016-06-24 14:23:46,712 INFO initialize @yuuta12221222,176 tweets
+2016-06-24 14:23:46,712 DEBUG kwargs:{'exclude_replies': 'false', 'count': 200, 'include_rts': 'false', 'screen_name': '@yuuta12221222'}
+2016-06-24 14:23:46,712 INFO loop @yuuta12221222,176 tweets
+2016-06-24 14:23:48,052 DEBUG result length: 172
+2016-06-24 14:23:48,052 INFO loop @yuuta12221222,348 tweets
+2016-06-24 14:23:49,416 DEBUG result length: 175
+2016-06-24 14:23:49,417 INFO loop @yuuta12221222,523 tweets
+2016-06-24 14:23:50,576 DEBUG result length: 180
+2016-06-24 14:23:50,577 INFO loop @yuuta12221222,703 tweets
+2016-06-24 14:24:05,577 INFO kill process
+2016-06-24 14:24:05,578 DEBUG Using resume
+2016-06-24 14:24:06,791 INFO loop @yuuta12221222,850 tweets
+2016-06-24 14:24:07,886 DEBUG result length: 140
+2016-06-24 14:24:07,886 INFO loop @yuuta12221222,990 tweets
+2016-06-24 14:24:09,201 DEBUG result length: 152
+2016-06-24 14:24:09,202 INFO loop @yuuta12221222,1142 tweets
+2016-06-24 14:24:10,353 DEBUG result length: 173
+2016-06-24 14:24:10,353 INFO loop @yuuta12221222,1315 tweets
+2016-06-24 14:24:11,457 DEBUG result length: 144
+2016-06-24 14:24:11,457 INFO loop @yuuta12221222,1459 tweets
+2016-06-24 14:24:12,561 DEBUG result length: 149
+2016-06-24 14:24:12,561 INFO loop @yuuta12221222,1608 tweets
+2016-06-24 14:24:13,395 DEBUG result length: 51
+2016-06-24 14:24:13,396 INFO loop @yuuta12221222,1659 tweets
+2016-06-24 14:24:13,865 DEBUG result length: 1
+2016-06-24 14:24:13,865 INFO no tweets of timeline
+2016-06-24 14:24:14,867 INFO initialize @yabajibo,149 tweets
+2016-06-24 14:24:14,867 DEBUG kwargs:{'exclude_replies': 'false', 'count': 200, 'include_rts': 'false', 'screen_name': '@yabajibo'}
+2016-06-24 14:24:14,868 INFO loop @yabajibo,149 tweets
+2016-06-24 14:24:15,847 DEBUG result length: 151
+2016-06-24 14:24:15,847 INFO loop @yabajibo,300 tweets
+2016-06-24 14:24:17,128 DEBUG result length: 175
+2016-06-24 14:24:17,128 INFO loop @yabajibo,475 tweets
+2016-06-24 14:24:18,114 DEBUG result length: 164
+2016-06-24 14:24:18,115 INFO loop @yabajibo,639 tweets
+2016-06-24 14:24:19,546 DEBUG result length: 161
+2016-06-24 14:24:19,546 INFO loop @yabajibo,800 tweets
+2016-06-24 14:24:20,513 DEBUG result length: 157
+2016-06-24 14:24:20,514 INFO loop @yabajibo,957 tweets
+2016-06-24 14:24:21,582 DEBUG result length: 164
+2016-06-24 14:24:21,582 INFO loop @yabajibo,1121 tweets
+2016-06-24 14:24:22,609 DEBUG result length: 168
+2016-06-24 14:24:22,609 INFO loop @yabajibo,1289 tweets
+2016-06-24 14:24:23,636 DEBUG result length: 169
+2016-06-24 14:24:23,636 INFO loop @yabajibo,1458 tweets
+2016-06-24 14:24:24,669 DEBUG result length: 153
+2016-06-24 14:24:24,669 INFO loop @yabajibo,1611 tweets
+2016-06-24 14:24:25,706 DEBUG result length: 159
+2016-06-24 14:24:25,706 INFO loop @yabajibo,1770 tweets
+2016-06-24 14:24:26,690 DEBUG result length: 161
+2016-06-24 14:24:26,690 INFO loop @yabajibo,1931 tweets
+2016-06-24 14:24:27,683 DEBUG result length: 162
+2016-06-24 14:24:27,684 INFO loop @yabajibo,2093 tweets
+2016-06-24 14:24:28,717 DEBUG result length: 156
+2016-06-24 14:24:28,718 INFO loop @yabajibo,2249 tweets
+2016-06-24 14:24:29,781 DEBUG result length: 179
+2016-06-24 14:24:29,781 INFO loop @yabajibo,2428 tweets
+2016-06-24 14:24:30,875 DEBUG result length: 176
+2016-06-24 14:24:30,875 INFO loop @yabajibo,2604 tweets
+2016-06-24 14:24:31,570 DEBUG result length: 23
+2016-06-24 14:24:31,570 INFO loop @yabajibo,2627 tweets
+2016-06-24 14:24:32,043 DEBUG result length: 1
+2016-06-24 14:24:32,044 INFO no tweets of timeline
+2016-06-24 14:24:33,281 INFO initialize @marinaumauma,176 tweets
+2016-06-24 14:24:33,281 DEBUG kwargs:{'exclude_replies': 'false', 'count': 200, 'include_rts': 'false', 'screen_name': '@marinaumauma'}
+2016-06-24 14:24:33,281 INFO loop @marinaumauma,176 tweets
+2016-06-24 14:24:34,448 DEBUG result length: 171
+2016-06-24 14:24:34,449 INFO loop @marinaumauma,347 tweets
+2016-06-24 14:24:35,622 DEBUG result length: 179
+2016-06-24 14:24:35,622 INFO loop @marinaumauma,526 tweets
+2016-06-24 14:24:36,748 DEBUG result length: 181
+2016-06-24 14:24:36,748 INFO loop @marinaumauma,707 tweets
+2016-06-24 14:24:37,873 DEBUG result length: 164
+2016-06-24 14:24:37,874 INFO loop @marinaumauma,871 tweets
+2016-06-24 14:24:52,874 INFO kill process
+2016-06-24 14:24:52,874 DEBUG Using resume
+2016-06-24 14:24:54,048 INFO loop @marinaumauma,1057 tweets
+2016-06-24 14:24:55,147 DEBUG result length: 171
+2016-06-24 14:24:55,147 INFO loop @marinaumauma,1228 tweets
+2016-06-24 14:24:56,256 DEBUG result length: 166
+2016-06-24 14:24:56,257 INFO loop @marinaumauma,1394 tweets
+2016-06-24 14:24:57,351 DEBUG result length: 173
+2016-06-24 14:24:57,351 INFO loop @marinaumauma,1567 tweets
+2016-06-24 14:24:58,443 DEBUG result length: 188
+2016-06-24 14:24:58,443 INFO loop @marinaumauma,1755 tweets
+2016-06-24 14:24:59,537 DEBUG result length: 179
+2016-06-24 14:24:59,538 INFO loop @marinaumauma,1934 tweets
+2016-06-24 14:25:00,689 DEBUG result length: 171
+2016-06-24 14:25:00,689 INFO loop @marinaumauma,2105 tweets
+2016-06-24 14:25:02,004 DEBUG result length: 171
+2016-06-24 14:25:02,004 INFO loop @marinaumauma,2276 tweets
+2016-06-24 14:25:03,311 DEBUG result length: 189
+2016-06-24 14:25:03,311 INFO loop @marinaumauma,2465 tweets
+2016-06-24 14:25:04,406 DEBUG result length: 191
+2016-06-24 14:25:04,406 INFO loop @marinaumauma,2656 tweets
+2016-06-24 14:25:05,455 DEBUG result length: 183
+2016-06-24 14:25:05,455 INFO loop @marinaumauma,2839 tweets
+2016-06-24 14:25:06,281 DEBUG result length: 63
+2016-06-24 14:25:06,281 INFO loop @marinaumauma,2902 tweets
+2016-06-24 14:25:06,734 DEBUG result length: 1
+2016-06-24 14:25:06,734 INFO no tweets of timeline
+2016-06-24 14:25:07,883 INFO initialize @kamiyakensuke,169 tweets
+2016-06-24 14:25:07,883 DEBUG kwargs:{'exclude_replies': 'false', 'count': 200, 'include_rts': 'false', 'screen_name': '@kamiyakensuke'}
+2016-06-24 14:25:07,883 INFO loop @kamiyakensuke,169 tweets
+2016-06-24 14:25:08,949 DEBUG result length: 185
+2016-06-24 14:25:08,949 INFO loop @kamiyakensuke,354 tweets
+2016-06-24 14:25:10,058 DEBUG result length: 181
+2016-06-24 14:25:10,059 INFO loop @kamiyakensuke,535 tweets
+2016-06-24 14:25:11,179 DEBUG result length: 195
+2016-06-24 14:25:11,180 INFO loop @kamiyakensuke,730 tweets
+2016-06-24 14:25:12,278 DEBUG result length: 196
+2016-06-24 14:25:12,279 INFO loop @kamiyakensuke,926 tweets
+2016-06-24 14:25:13,355 DEBUG result length: 189
+2016-06-24 14:25:13,356 INFO loop @kamiyakensuke,1115 tweets
+2016-06-24 14:25:14,505 DEBUG result length: 190
+2016-06-24 14:25:14,505 INFO loop @kamiyakensuke,1305 tweets
+2016-06-24 14:25:15,553 DEBUG result length: 164
+2016-06-24 14:25:15,553 INFO loop @kamiyakensuke,1469 tweets
+2016-06-24 14:25:16,609 DEBUG result length: 177
+2016-06-24 14:25:16,610 INFO loop @kamiyakensuke,1646 tweets
+2016-06-24 14:25:17,686 DEBUG result length: 160
+2016-06-24 14:25:17,687 INFO loop @kamiyakensuke,1806 tweets
+2016-06-24 14:25:18,654 DEBUG result length: 116
+2016-06-24 14:25:18,655 INFO loop @kamiyakensuke,1922 tweets
+2016-06-24 14:25:19,652 DEBUG result length: 109
+2016-06-24 14:25:19,652 INFO loop @kamiyakensuke,2031 tweets
+2016-06-24 14:25:20,580 DEBUG result length: 80
+2016-06-24 14:25:20,581 INFO loop @kamiyakensuke,2111 tweets
+2016-06-24 14:25:21,402 DEBUG result length: 53
+2016-06-24 14:25:21,402 INFO loop @kamiyakensuke,2164 tweets
+2016-06-24 14:25:22,353 DEBUG result length: 112
+2016-06-24 14:25:22,353 INFO loop @kamiyakensuke,2276 tweets
+2016-06-24 14:25:22,907 DEBUG result length: 10
+2016-06-24 14:25:22,908 INFO loop @kamiyakensuke,2286 tweets
+2016-06-24 14:25:23,363 DEBUG result length: 1
+2016-06-24 14:25:23,364 INFO no tweets of timeline
+2016-06-24 14:25:23,950 INFO initialize @tanaiba,4 tweets
+2016-06-24 14:25:23,951 DEBUG kwargs:{'exclude_replies': 'false', 'count': 200, 'include_rts': 'false', 'screen_name': '@tanaiba'}
+2016-06-24 14:25:23,951 INFO loop @tanaiba,4 tweets
+2016-06-24 14:25:24,569 DEBUG result length: 6
+2016-06-24 14:25:24,569 INFO loop @tanaiba,10 tweets
+2016-06-24 14:25:25,256 DEBUG result length: 25
+2016-06-24 14:25:25,256 INFO loop @tanaiba,35 tweets
+2016-06-24 14:25:26,053 DEBUG result length: 41
+2016-06-24 14:25:26,053 INFO loop @tanaiba,76 tweets
+2016-06-24 14:25:26,845 DEBUG result length: 43
+2016-06-24 14:25:26,845 INFO loop @tanaiba,119 tweets
+2016-06-24 14:25:27,544 DEBUG result length: 28
+2016-06-24 14:25:27,544 INFO loop @tanaiba,147 tweets
+2016-06-24 14:25:28,600 DEBUG result length: 114
+2016-06-24 14:25:28,600 INFO loop @tanaiba,261 tweets
+2016-06-24 14:25:29,787 DEBUG result length: 164
+2016-06-24 14:25:29,787 INFO loop @tanaiba,425 tweets
+2016-06-24 14:25:30,738 DEBUG result length: 128
+2016-06-24 14:25:30,739 INFO loop @tanaiba,553 tweets
+2016-06-24 14:25:31,696 DEBUG result length: 110
+2016-06-24 14:25:31,697 INFO loop @tanaiba,663 tweets
+2016-06-24 14:25:32,659 DEBUG result length: 104
+2016-06-24 14:25:32,659 INFO loop @tanaiba,767 tweets
+2016-06-24 14:25:33,718 DEBUG result length: 164
+2016-06-24 14:25:33,718 INFO loop @tanaiba,931 tweets
+2016-06-24 14:25:34,813 DEBUG result length: 174
+2016-06-24 14:25:34,813 INFO loop @tanaiba,1105 tweets
+2016-06-24 14:25:35,669 DEBUG result length: 62
+2016-06-24 14:25:35,669 INFO loop @tanaiba,1167 tweets
+2016-06-24 14:25:36,581 DEBUG result length: 52
+2016-06-24 14:25:36,581 INFO loop @tanaiba,1219 tweets
+2016-06-24 14:25:37,421 DEBUG result length: 57
+2016-06-24 14:25:37,421 INFO loop @tanaiba,1276 tweets
+2016-06-24 14:25:38,212 DEBUG result length: 39
+2016-06-24 14:25:38,212 INFO loop @tanaiba,1315 tweets
+2016-06-24 14:25:38,656 DEBUG result length: 1
+2016-06-24 14:25:38,656 INFO no tweets of timeline
+2016-06-24 14:25:39,245 INFO initialize @yuke0502,4 tweets
+2016-06-24 14:25:39,245 DEBUG kwargs:{'exclude_replies': 'false', 'count': 200, 'include_rts': 'false', 'screen_name': '@yuke0502'}
+2016-06-24 14:25:39,245 INFO loop @yuke0502,4 tweets
+2016-06-24 14:25:39,999 DEBUG result length: 11
+2016-06-24 14:25:39,999 INFO loop @yuke0502,15 tweets
+2016-06-24 14:25:40,495 DEBUG result length: 2
+2016-06-24 14:25:40,495 INFO loop @yuke0502,17 tweets
+2016-06-24 14:25:40,970 DEBUG result length: 2
+2016-06-24 14:25:40,970 INFO loop @yuke0502,19 tweets
+2016-06-24 14:25:41,603 DEBUG result length: 5
+2016-06-24 14:25:41,603 INFO loop @yuke0502,24 tweets
+2016-06-24 14:25:42,180 DEBUG result length: 6
+2016-06-24 14:25:42,180 INFO loop @yuke0502,30 tweets
+2016-06-24 14:25:42,794 DEBUG result length: 6
+2016-06-24 14:25:42,794 INFO loop @yuke0502,36 tweets
+2016-06-24 14:25:43,393 DEBUG result length: 9
+2016-06-24 14:25:43,394 INFO loop @yuke0502,45 tweets
+2016-06-24 14:25:43,971 DEBUG result length: 4
+2016-06-24 14:25:43,971 INFO loop @yuke0502,49 tweets
+2016-06-24 14:25:44,426 DEBUG result length: 2
+2016-06-24 14:25:44,427 INFO loop @yuke0502,51 tweets
+2016-06-24 14:25:45,029 DEBUG result length: 8
+2016-06-24 14:25:45,030 INFO loop @yuke0502,59 tweets
+2016-06-24 14:25:46,021 DEBUG result length: 13
+2016-06-24 14:25:46,021 INFO loop @yuke0502,72 tweets
+2016-06-24 14:25:46,622 DEBUG result length: 6
+2016-06-24 14:25:46,622 INFO loop @yuke0502,78 tweets
+2016-06-24 14:25:47,252 DEBUG result length: 8
+2016-06-24 14:25:47,252 INFO loop @yuke0502,86 tweets
+2016-06-24 14:25:47,706 DEBUG result length: 1
+2016-06-24 14:25:47,706 INFO no tweets of timeline
+2016-06-24 14:25:48,832 INFO initialize @heaven_is_mine,176 tweets
+2016-06-24 14:25:48,832 DEBUG kwargs:{'exclude_replies': 'false', 'count': 200, 'include_rts': 'false', 'screen_name': '@heaven_is_mine'}
+2016-06-24 14:25:48,832 INFO loop @heaven_is_mine,176 tweets
+2016-06-24 14:25:49,923 DEBUG result length: 193
+2016-06-24 14:25:49,924 INFO loop @heaven_is_mine,369 tweets
+2016-06-24 14:25:51,010 DEBUG result length: 186
+2016-06-24 14:25:51,010 INFO loop @heaven_is_mine,555 tweets
+2016-06-24 14:25:52,096 DEBUG result length: 189
+2016-06-24 14:25:52,096 INFO loop @heaven_is_mine,744 tweets
+2016-06-24 14:25:53,012 DEBUG result length: 79
+2016-06-24 14:25:53,013 INFO loop @heaven_is_mine,823 tweets
+2016-06-24 14:25:53,459 DEBUG result length: 1
+2016-06-24 14:25:53,459 INFO no tweets of timeline
+2016-06-24 14:25:54,564 INFO initialize @K_M_overground,154 tweets
+2016-06-24 14:25:54,564 DEBUG kwargs:{'exclude_replies': 'false', 'count': 200, 'include_rts': 'false', 'screen_name': '@K_M_overground'}
+2016-06-24 14:25:54,565 INFO loop @K_M_overground,154 tweets
+2016-06-24 14:25:55,569 DEBUG result length: 127
+2016-06-24 14:25:55,569 INFO loop @K_M_overground,281 tweets
+2016-06-24 14:25:56,604 DEBUG result length: 112
+2016-06-24 14:25:56,604 INFO loop @K_M_overground,393 tweets
+2016-06-24 14:25:57,724 DEBUG result length: 122
+2016-06-24 14:25:57,725 INFO loop @K_M_overground,515 tweets
+2016-06-24 14:25:58,880 DEBUG result length: 137
+2016-06-24 14:25:58,881 INFO loop @K_M_overground,652 tweets
+2016-06-24 14:26:00,088 DEBUG result length: 153
+2016-06-24 14:26:00,088 INFO loop @K_M_overground,805 tweets
+2016-06-24 14:26:01,131 DEBUG result length: 146
+2016-06-24 14:26:01,131 INFO loop @K_M_overground,951 tweets
+2016-06-24 14:26:02,237 DEBUG result length: 142
+2016-06-24 14:26:02,237 INFO loop @K_M_overground,1093 tweets
+2016-06-24 14:26:03,278 DEBUG result length: 129
+2016-06-24 14:26:03,278 INFO loop @K_M_overground,1222 tweets
+2016-06-24 14:26:04,404 DEBUG result length: 169
+2016-06-24 14:26:04,405 INFO loop @K_M_overground,1391 tweets
+2016-06-24 14:26:05,543 DEBUG result length: 128
+2016-06-24 14:26:05,544 INFO loop @K_M_overground,1519 tweets
+2016-06-24 14:26:06,882 DEBUG result length: 144
+2016-06-24 14:26:06,882 INFO loop @K_M_overground,1663 tweets
+2016-06-24 14:26:07,975 DEBUG result length: 152
+2016-06-24 14:26:07,976 INFO loop @K_M_overground,1815 tweets
+2016-06-24 14:26:09,134 DEBUG result length: 153
+2016-06-24 14:26:09,134 INFO loop @K_M_overground,1968 tweets
+2016-06-24 14:26:10,230 DEBUG result length: 138
+2016-06-24 14:26:10,230 INFO loop @K_M_overground,2106 tweets
+2016-06-24 14:26:11,303 DEBUG result length: 147
+2016-06-24 14:26:11,303 INFO loop @K_M_overground,2253 tweets
+2016-06-24 14:26:12,257 DEBUG result length: 54
+2016-06-24 14:26:12,258 INFO loop @K_M_overground,2307 tweets
+2016-06-24 14:26:12,708 DEBUG result length: 1
+2016-06-24 14:26:12,708 INFO no tweets of timeline
+2016-06-24 14:26:13,783 INFO initialize @tamo2t,180 tweets
+2016-06-24 14:26:13,783 DEBUG kwargs:{'exclude_replies': 'false', 'count': 200, 'include_rts': 'false', 'screen_name': '@tamo2t'}
+2016-06-24 14:26:13,784 INFO loop @tamo2t,180 tweets
+2016-06-24 14:26:15,168 DEBUG result length: 189
+2016-06-24 14:26:15,168 INFO loop @tamo2t,369 tweets
+2016-06-24 14:26:16,226 DEBUG result length: 194
+2016-06-24 14:26:16,226 INFO loop @tamo2t,563 tweets
+2016-06-24 14:26:17,512 DEBUG result length: 190
+2016-06-24 14:26:17,512 INFO loop @tamo2t,753 tweets
+2016-06-24 14:26:32,513 INFO kill process
+2016-06-24 14:26:32,513 DEBUG Using resume
+2016-06-24 14:26:33,612 INFO loop @tamo2t,948 tweets
+2016-06-24 14:26:34,491 DEBUG result length: 8
+2016-06-24 14:26:34,491 INFO loop @tamo2t,956 tweets
+2016-06-24 14:26:34,934 DEBUG result length: 1
+2016-06-24 14:26:34,935 INFO no tweets of timeline
+2016-06-24 14:26:35,372 DEBUG raise TwitterHTTPError
+2016-06-24 14:26:36,481 INFO initialize @a_gb619,197 tweets
+2016-06-24 14:26:36,481 DEBUG kwargs:{'exclude_replies': 'false', 'count': 200, 'include_rts': 'false', 'screen_name': '@a_gb619'}
+2016-06-24 14:26:36,481 INFO loop @a_gb619,197 tweets
+2016-06-24 14:26:37,635 DEBUG result length: 193
+2016-06-24 14:26:37,636 INFO loop @a_gb619,390 tweets
+2016-06-24 14:26:38,693 DEBUG result length: 173
+2016-06-24 14:26:38,694 INFO loop @a_gb619,563 tweets
+2016-06-24 14:26:39,759 DEBUG result length: 185
+2016-06-24 14:26:39,759 INFO loop @a_gb619,748 tweets
+2016-06-24 14:26:40,904 DEBUG result length: 184
+2016-06-24 14:26:40,905 INFO loop @a_gb619,932 tweets
+2016-06-24 14:26:41,966 DEBUG result length: 183
+2016-06-24 14:26:41,966 INFO loop @a_gb619,1115 tweets
+2016-06-24 14:26:43,053 DEBUG result length: 180
+2016-06-24 14:26:43,053 INFO loop @a_gb619,1295 tweets
+2016-06-24 14:26:44,110 DEBUG result length: 182
+2016-06-24 14:26:44,110 INFO loop @a_gb619,1477 tweets
+2016-06-24 14:26:45,173 DEBUG result length: 181
+2016-06-24 14:26:45,174 INFO loop @a_gb619,1658 tweets
+2016-06-24 14:26:46,262 DEBUG result length: 186
+2016-06-24 14:26:46,262 INFO loop @a_gb619,1844 tweets
+2016-06-24 14:26:47,299 DEBUG result length: 174
+2016-06-24 14:26:47,300 INFO loop @a_gb619,2018 tweets
+2016-06-24 14:26:48,411 DEBUG result length: 186
+2016-06-24 14:26:48,411 INFO loop @a_gb619,2204 tweets
+2016-06-24 14:26:49,520 DEBUG result length: 179
+2016-06-24 14:26:49,521 INFO loop @a_gb619,2383 tweets
+2016-06-24 14:26:50,617 DEBUG result length: 170
+2016-06-24 14:26:50,617 INFO loop @a_gb619,2553 tweets
+2016-06-24 14:26:51,706 DEBUG result length: 177
+2016-06-24 14:26:51,706 INFO loop @a_gb619,2730 tweets
+2016-06-24 14:26:52,761 DEBUG result length: 180
+2016-06-24 14:26:52,761 INFO loop @a_gb619,2910 tweets
+2016-06-24 14:26:53,414 DEBUG result length: 20
+2016-06-24 14:26:53,414 INFO loop @a_gb619,2930 tweets
+2016-06-24 14:26:53,859 DEBUG result length: 1
+2016-06-24 14:26:53,860 INFO no tweets of timeline
+2016-06-24 14:26:53,860 INFO finished

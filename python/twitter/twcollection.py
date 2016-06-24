@@ -84,7 +84,6 @@ class TwCollectionBase(object):
             logging.error(traceback.format_exc())
             raise
 
-    # TODO
     # This method is sleeping until rate limit of next reset.
     # If your account use up rate limit, calling sleep method.
     # Target is api name, and version is Oauth version.
@@ -94,7 +93,7 @@ class TwCollectionBase(object):
         reset_time = self.twitter.application.rate_limit_status()["resources"][target[0]][target[1]]["reset"]
         diff = datetime.fromtimestamp(time.mktime(time.gmtime(reset_time))) - datetime.utcnow()
         logging.info("sleep time: {0}, time{1}".format(diff.total_seconds(), diff))
-        time.sleep(diff.total_seconds())
+        time.sleep(diff.total_seconds() + 1)
 
 # Using Twitter REST API
 class TwitterREST(TwCollectionBase):
@@ -125,15 +124,23 @@ class TwitterREST(TwCollectionBase):
         try:
             return process_return_data("first")
         except TimeoutException as e:
-            if self.resume_data is None:
+            # For using kill_timer
+            import signal
+            signal.alarm(0)
+            if not self.resume_data:
                 return process_return_data("first")
             else:
                 return process_return_data("resume")
         except TwitterHTTPError as e:
+            logging.debug("raise TwitterHTTPError:{0}".format(e.response_data))
+            # For using kill_timer
+            import signal
+            signal.alarm(0)
+            target = ("statuses", "/statuses/user_timeline")
             # error code 88 is rate limit exceeded
             if "errors" in e.response_data:
                 if e.response_data["errors"][0]["code"] == 88:
-                    self._managing_rateLimit()
+                    self._managing_rateLimit(target=target, version=2)
                     if self.resume_data is None:
                         return process_return_data("first")
                     else:
@@ -175,7 +182,7 @@ class TwitterREST(TwCollectionBase):
             result += callback(tmp_result)
         else:
             tmp_result = user_timeline(**kwargs)
-            logging.info("initilaze {0},{1} tweets".format(kwargs["screen_name"], len(tmp_result)))
+            logging.info("initialize {0},{1} tweets".format(kwargs["screen_name"], len(tmp_result)))
             logging.debug("kwargs:{0}".format(kwargs))
             result = callback(tmp_result)
             if len(tmp_result) <= 1:
