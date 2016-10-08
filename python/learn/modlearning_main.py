@@ -110,7 +110,7 @@ def train_model(filename_list, baseline, vocablist, target_list):
             base_model.train(sentences=sentence)
             arylist.append(vector_outputer_cos(base_model, base_value, vocablist))
             if len(arylist) > 10:
-                pickle.dump(fp)
+                pickle.dump(arylist, fp)
                 arylist = []
             #reset base_model value
             base_model.reset_from(reset_model)
