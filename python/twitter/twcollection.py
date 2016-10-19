@@ -74,13 +74,16 @@ class TwCollectionBase(object):
                     )
             if version == 1:
                 self.twitter = Twitter(auth=auth)
+                logging.info("complete OAuth")
                 return
             elif version == 2:
                 auth = OAuth2(bearer_token=self.BEARER_TOKEN)
                 self.twitter = Twitter(auth=auth)
+                logging.info("complete OAuth2")
                 return
             elif version == 3:
                 self.twitter = TwitterStream(auth=auth)
+                logging.info("complete TwitterStream OAuth")
                 return
             raise Exception("arguments error")
         except Exception:
@@ -120,7 +123,7 @@ class TwCollectionBase(object):
 
     # This is decorator for resume process
     # If kill_timer run, continue process
-    def resume_data(self, target, version):
+    def resume(self, target, version):
         def __decorator(function):
             def __wrapper(*args, **kwargs):
                 @self.kill_timer(15)
@@ -146,13 +149,22 @@ class TwCollectionBase(object):
                     except TwitterHTTPError as e:
                         logging.info("raise TwitterHTTPError:{0}".format(e.response_data))
                         signal.alarm(0)
-                        # error cede 88 is rate limit exceeded
                         if "errors" in e.response_data:
+                            # error cede 88 is rate limit exceeded
                             if e.response_data["errors"][0]["code"] == 88:
                                 self._managing_rateLimit(target, version)
+                            # error code 34 is account is not exist
+                            if e.response_data["errors"][0]["code"] == 34:
+                                raise
                         elif "error" in e.response_data:
-                            logging.error("iregular error {0}".format(traceback.format_exc()))
-                            exit(1)
+                            if e.response_data["error"].find("authorized") != 1:
+                                logging.info(e.response_data["error"])
+                        # no defined TwitterHTTPError is raise.
+                        raise
+                    except Exception:
+                        logging.error("iregular error {0}".format(traceback.format_exc()))
+                        raise
+
             return __wrapper
         return __decorator
 
@@ -170,7 +182,7 @@ class TwitterREST(TwCollectionBase):
      input type
      kwargs = {
              "screen_name" : screen_name,
-             "count" : 200,
+             "count" : 100,
              "exclude_replies" : "false",
              "include_rts" : "false"
          }
@@ -185,13 +197,13 @@ class TwitterREST(TwCollectionBase):
         callback = lambda json: [(data["user"]["screen_name"], data["text"], data["id_str"]) for data in json]
         target = ("statuses", "/statuses/user_timeline")
 
-        @self.resume_data(target, version=2)
+        @self.resume(target, version=2)
         def process():
             if self.resume_data is None:
                 self.resume_data = []
             tmp_result = self.twitter.statuses.user_timeline(**self.account_kwargs)
             self.resume_data += callback(tmp_result)
-            logging.info("loop {0},{1} tweets".format(kwargs["screen_name"], len(self.resume_data)))
+            logging.debug("loop {0},{1} tweets".format(kwargs["screen_name"], len(self.resume_data)))
             logging.debug("kwargs:{0}".format(self.account_kwargs))
             logging.debug("tmp_result length {0}".format(len(tmp_result)))
             # if there are tmp_result length small than 1, return finish flag 
@@ -224,7 +236,7 @@ class TwitterREST(TwCollectionBase):
         target = ("statuses", "/search/tweets")
         callback = lambda json: [(data["id_str"], data["created_at"], data["text"]) for data in json["statuses"]]
         # Countermeasure for rate limit
-        @self.resume_data(target, version=2)
+        @self.resume(target, version=2)
         def process():
             if self.resume_data is None:
                 self.resume_data = []
