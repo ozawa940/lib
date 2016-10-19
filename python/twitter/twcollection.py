@@ -18,7 +18,9 @@ Example)
         "ACCESS_TOKEN" : "",
         "ACCESS_TOKEN_SECRET" : ""
      }
-
+ 
+ var = TwitterREST(keylist)
+ 
 
 """
 import logging
@@ -187,9 +189,11 @@ class TwitterREST(TwCollectionBase):
              "include_rts" : "false"
          }
 
-     maybe happend stackover.
      if you want to change data type, add "callback" to kwargs.
      # kwargs = {"callback" : lambda json: [data["text"] for data in json["statuses"]]}
+
+     
+
     '''
 
     def get_account_tweet(self, kwargs):
