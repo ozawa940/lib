@@ -184,7 +184,7 @@ class TwitterREST(TwCollectionBase):
      input type
      kwargs = {
              "screen_name" : screen_name,
-             "count" : 100,
+             "count" : 200,
              "exclude_replies" : "false",
              "include_rts" : "false"
          }
@@ -196,10 +196,12 @@ class TwitterREST(TwCollectionBase):
 
     '''
 
-    def get_account_tweet(self, kwargs):
+    def get_account_tweet(self, kwargs, callback=None):
         self.account_kwargs = kwargs
-        callback = lambda json: [(data["user"]["screen_name"], data["text"], data["id_str"]) for data in json]
+        if callback is None:
+            callback = lambda json: [(data["user"]["screen_name"], data["text"], data["id_str"]) for data in json]
         target = ("statuses", "/statuses/user_timeline")
+        logging.info("kwargs: {0}".format(kwargs))
 
         @self.resume(target, version=2)
         def process():
@@ -225,20 +227,21 @@ class TwitterREST(TwCollectionBase):
 
     ''' input type example
         kwargs = {
-            kwargs = {
-                    "q" : "serach_target",
-                    "count" : 200,
-                    "result_type" : recent,
-                }
+                "q" : "serach_target",
+                "count" : 200,
+                "result_type" : recent,
         }
         if you want over 200 tweets, recall this method to add "max_id" to kwargs.
         if you want to change data type, add "callback" to kwargs.
         # kwargs = {"callback" : lambda json: [data["text"] for data in json["statuses"]]}
     '''
-    def get_search_tweet(self, kwargs):
+    def get_search_tweet(self, kwargs, callback=None):
         self.account_kwargs = kwargs
+        if callback is None:
+            callback = lambda json: [(data["id_str"], data["created_at"], data["text"]) for data in json["statuses"]]
         target = ("statuses", "/search/tweets")
-        callback = lambda json: [(data["id_str"], data["created_at"], data["text"]) for data in json["statuses"]]
+        logging.info("kwargs: {0}".format(kwargs))
+
         # Countermeasure for rate limit
         @self.resume(target, version=2)
         def process():
