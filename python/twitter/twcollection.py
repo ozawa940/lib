@@ -239,7 +239,7 @@ class TwitterREST(TwCollectionBase):
         self.account_kwargs = kwargs
         if callback is None:
             callback = lambda json: [(data["id_str"], data["created_at"], data["text"]) for data in json["statuses"]]
-        target = ("statuses", "/search/tweets")
+        target = ("search", "/search/tweets")
         logging.info("kwargs: {0}".format(kwargs))
 
         # Countermeasure for rate limit
